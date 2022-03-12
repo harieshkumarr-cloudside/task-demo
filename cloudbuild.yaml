@@ -8,7 +8,7 @@ steps:
   - '-c'
   - > 
     gcloud deploy releases create release-$BUILD_ID
-    --delivery-pipeline=clouddeploy-mp
+    --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
     --images=hariesh1=us-central1-docker.pkg.dev/cloudside-academy/hariesh1', '.'
