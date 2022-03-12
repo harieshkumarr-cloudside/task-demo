@@ -8,7 +8,7 @@ steps:
   args:
   - '-c'
   - > 
-    gcloud deploy releases create release-$COMMIT_SHA
+    gcloud deploy releases create release-$REVISION_ID
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
