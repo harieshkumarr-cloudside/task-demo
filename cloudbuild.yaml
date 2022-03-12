@@ -8,7 +8,7 @@ steps:
   args:
   - '-c'
   - > 
-    gcloud deploy releases create release-$_[A-Z0-9_]+
+    gcloud deploy releases create release-$_FOO
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
