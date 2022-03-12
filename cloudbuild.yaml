@@ -8,7 +8,7 @@ steps:
   args:
   - '-c'
   - > 
-    gcloud deploy releases create release-$SHORT_SHA
+    gcloud deploy releases create release-$SHA256
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
