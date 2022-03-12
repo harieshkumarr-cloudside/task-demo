@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: mini-proj
-        image: gcr.io/cloudside-academy/hariesh1
+        image: hariesh1
         ports:
         - containerPort: 80
 
