@@ -10,4 +10,4 @@ steps:
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
-    --images=hariesh1=gcr.io/cloudside-academy/hariesh1
+    --images=hariesh1=gcr.io/cloudside-academy/hariesh1:latest
