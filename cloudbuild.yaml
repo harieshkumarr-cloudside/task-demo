@@ -1,5 +1,14 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/cloudside-academy/hariesh1', '.' ]
-images:
-- 'gcr.io/cloudside-academy/hariesh1'
+- name: 'gcr.io/k8s-skaffold/pack'
+  entrypoint: 'pack'
+  args: ['build', '--builder=gcr.io/buildpacks/builder', '--publish', 'us-central1-docker.pkg.dev/cloudside-academy/hariesh1', '.']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - > 
+    gcloud deploy releases create release-$BUILD_ID
+    --delivery-pipeline=clouddeploy-mp
+    --region=us-central1
+    --source=./
+    --images=hariesh1=us-central1-docker.pkg.dev/cloudside-academy/hariesh1', '.'
