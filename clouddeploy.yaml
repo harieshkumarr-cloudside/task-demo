@@ -1,0 +1,17 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: DeliveryPipeline
+metadata:
+ name: cloud-deploy-mp1
+description: main application pipeline
+serialPipeline:
+ stages:
+ - targetId: mini-project
+   profiles: []
+---
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+ name: mini-project
+description: development cluster
+gke:
+ cluster: projects/cloudside-academy/locations/us-central1-c/clusters/mini-project
