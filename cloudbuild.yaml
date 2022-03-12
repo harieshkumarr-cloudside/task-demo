@@ -6,7 +6,7 @@ steps:
   args:
   - '-c'
   - > 
-    gcloud deploy releases create release-hari1
+    gcloud deploy releases create release-hari2
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-central1
     --source=./
