@@ -43,7 +43,7 @@ p {
 
 a {
   cursor: pointer;
-  color: #ed7c43;
+  color: #4d0099;
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ label {
 app-top-bar {
   width: 100%;
   height: 68px;
-  background-color: #ed7c43;
+  background-color: #4d0099;
   padding: 16px;
   display: flex;
   flex-direction: row;
