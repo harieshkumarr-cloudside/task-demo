@@ -1,6 +1,5 @@
 ### STAGE 1: Build ###
 FROM node:16.14-alpine AS build
-RUN git clone https://github.com/harieshkumarr-cloudside/task-master.git
 WORKDIR /tasks-master
 COPY package.json package-lock.json ./
 RUN npm install
